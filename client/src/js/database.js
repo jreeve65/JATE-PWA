@@ -73,7 +73,7 @@ export const getDb = async () => {
   return result?.value;
 };
 export const deleteDb = async () => {
-  console.log("Uh oh! The cat ran away with your notes!");
+  console.log("deleting note hope that is what you wanted!");
   const jateDb = await openDB("jate", 1);
   const tx = jateDb.transaction("jate", "readwrite");
   const store = tx.objectStore("jate");

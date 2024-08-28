@@ -1,4 +1,5 @@
 import { Workbox } from 'workbox-window';
+import { setupDeleteButton } from "./delete";
 import Editor from './editor';
 import './database';
 import '../css/style.css';
@@ -18,6 +19,10 @@ const loadSpinner = () => {
 };
 
 const editor = new Editor();
+
+// Setup the delete button with the editor instance
+setupDeleteButton(editor);
+
 
 if (typeof editor === 'undefined') {
   loadSpinner();
